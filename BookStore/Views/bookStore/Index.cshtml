@@ -1,0 +1,26 @@
+﻿@model IEnumerable<BookStore.Models.SACH>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="grid">
+    @foreach (var sach in Model)
+    {
+    <div class="card">
+        <a href="#" class="card__title">@sach.Tensach</a>
+        <img class="card__image" src="~/hinh/@sach.Anhbia">
+        <div class="card__content">
+            <p class="card__content__price">@sach.Giaban đ</p>
+        </div>
+        <div class="card__footer">
+            <button class="card__content__buy__btn">Buy</button>
+            <button class="card__content__like__btn"><img src="~/hinh/likeIcon.png" alt="like" width="40" height="40"></button>
+        </div>
+    </div>
+    }
+</div>
+
+
